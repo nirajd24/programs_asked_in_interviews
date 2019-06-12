@@ -53,8 +53,10 @@ public class SortCustUsingSecNum {
 		Collections.sort(list, new Comparator<Map.Entry<String, Customer>>() {
 			@Override
 			public int compare(Entry<String, Customer> o1, Entry<String, Customer> o2) {
-				//return o1.getValue().getName().compareTo(o2.getValue().getName());
-				return o1.getValue().getSocialSecurityNumber() - o2.getValue().getSocialSecurityNumber();
+				//In Ascending order
+				//return o1.getValue().getSocialSecurityNumber() - o2.getValue().getSocialSecurityNumber();
+				//In Descending order
+				return o2.getValue().getSocialSecurityNumber() - o1.getValue().getSocialSecurityNumber();
 			}
 		});
 		//sortCustomerUsingFieldWithLambda
